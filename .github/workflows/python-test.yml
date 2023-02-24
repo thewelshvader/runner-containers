@@ -3,4 +3,15 @@ name: Test Python script
 on:
   push:
     branches:
-      
+      - testing-debian-container
+
+jobs:
+  scripts:
+    name: Test script run
+    runs-on: self-hosted
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Run script
+      run: python test-script.py
