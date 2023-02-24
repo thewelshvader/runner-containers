@@ -1,0 +1,6 @@
+name: Test Python script
+
+on:
+  push:
+    branches:
+      
